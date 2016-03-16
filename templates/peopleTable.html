@@ -1,0 +1,14 @@
+<template name="peopleTable">
+  <table class="table table-striped">
+    <th>Name</th>
+    <th>Last Name</th>
+    <th>Birth Date</th>
+    {{#each people}}
+      <tr>
+        <td><a href="/edit/{{_id}}">{{ firstName }}</a></td>
+        <td><a href="/edit/{{_id}}">{{ lastName }}</a></td>
+        <td><a href="/edit/{{_id}}">{{ birthDate }}</a></td>
+      </tr>
+    {{/each}}
+  </table>
+</template>

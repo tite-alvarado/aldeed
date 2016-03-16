@@ -1,5 +1,3 @@
-Data = new Mongo.Collection('data');
-
 var Schemas = {};
 
 Schemas.Person = new SimpleSchema({
@@ -11,11 +9,6 @@ Schemas.Person = new SimpleSchema({
     type: String,
     label: "Last Name"
     },
-  age: {
-    type: Number,
-    label: "Age",
-    optional: true
-    },
   password: {
     type: String,
     autoform: {
@@ -24,12 +17,18 @@ Schemas.Person = new SimpleSchema({
       }
     }
   },
+  age: {
+    type: Number,
+    label: "Age",
+    optional: true,
+    min: 0
+    },
   birthDate: {
     type: Date,
     label: "Birth Date (YYYY-MM-DD)",
     autoform: {
       afFieldInput: {
-        type: "date"
+        type: "bootstrap-datepicker"
       }
     } 
   },

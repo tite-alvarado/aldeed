@@ -21,3 +21,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 aldeed:collection2
 aldeed:autoform
 twbs:bootstrap
+aldeed:autoform-bs-datepicker
+rajit:bootstrap3-datepicker
+iron:router
