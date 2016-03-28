@@ -1,14 +1,19 @@
-<template name="peopleForm">
-  <h3> People Form </h3>
+<template name="insertForm">
+  <div class="container">
+    {{> peopleTable }}
+    <br><br>
+    <h3> People Form </h3>
+    {{> quickForm id="Person" schema=Schemas.Person collection="Data" type="insert" }}
+  </div>
+</template>
 <!--
   {{> quickForm id="Person" schema=Schemas.Person collection="Data" type="update" doc=edit }}
--->
   {{#if edit._id }}
     {{> quickForm id="Person" schema=Schemas.Person collection="Data" type="update" doc=edit }}
   {{else}}
     {{> quickForm id="Person" schema=Schemas.Person collection="Data" type="insert" }}
   {{/if}}
-</template>
+-->
 
 <!--
 <template name="updateForm">

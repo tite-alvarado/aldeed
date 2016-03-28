@@ -47,6 +47,11 @@ Schemas.Person = new SimpleSchema({
       }
     }
   },
+  email: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Email,
+    label: "Email"
+  },
   phones: {
     type: Object,
     optional: true

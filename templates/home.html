@@ -1,11 +1,14 @@
 <template name="home">
+    {{> insertForm}}
+<!--
   <div class="container">
-    <header>
-      <h3>Registered People</h3>
-      {{> peopleTable }}
-    </header>
-  </div>
-  <div class="container">
+    <h2> {{_id}} </h2> - <h3> {{ Name }} </h3>
+    {{> updateForm }}
+  {{#if update }}
+    {{> updateForm }}
+  {{else}}
     {{> peopleForm }}
+  {{/if}}
   </div>
+-->
 </template>  
